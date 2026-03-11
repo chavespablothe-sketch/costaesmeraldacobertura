@@ -10,11 +10,11 @@ const FirstFloorSection = () => {
         <div className="max-w-7xl mx-auto fade-section">
           <div className="border border-border p-6 md:p-12">
             <img
-              src={luzNatural}
+
               alt="Vista da sala de estar com luz natural e vista para o mar"
               className="w-full h-[350px] md:h-[500px] object-cover brightness-110 contrast-105 mb-8"
-              loading="lazy"
-            />
+              loading="lazy" src="/lovable-uploads/857734f9-027f-4df3-a65b-c25ecf8c90dc.png" />
+            
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground mb-4">
                 Luz Natural e Fluidez <span className="italic">Espacial</span>
@@ -55,8 +55,8 @@ const FirstFloorSection = () => {
                 src={interior1}
                 alt="Estar social banhado por luz natural com vista para o mar"
                 className="w-full h-[400px] md:h-[500px] object-cover brightness-110 contrast-105"
-                loading="lazy"
-              />
+                loading="lazy" />
+              
             </div>
           </div>
         </div>
@@ -71,8 +71,8 @@ const FirstFloorSection = () => {
                 src={kitchen}
                 alt="Cozinha com armários Formaplas e eletrodomésticos Spicy"
                 className="w-full h-[400px] md:h-[500px] object-cover brightness-110 contrast-105"
-                loading="lazy"
-              />
+                loading="lazy" />
+              
             </div>
             <div className="order-1 md:order-2">
               <p className="text-sm font-sans tracking-widest uppercase text-primary-foreground/50 mb-4">
@@ -108,8 +108,8 @@ const FirstFloorSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default FirstFloorSection;
