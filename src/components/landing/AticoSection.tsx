@@ -9,12 +9,12 @@ const AticoSection = () => {
       {/* Ascensão ao Ático */}
       <div className="py-20 md:py-32 px-6 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto fade-section">
-          <div className="grid md:grid-cols-2 gap-0 items-stretch min-h-[500px]">
+          <div className="grid md:grid-cols-2 gap-0 items-stretch min-h-[350px]">
             <div className="overflow-hidden">
               <img
                 src={staircase}
                 alt="Escadaria de acesso ao Ático"
-                className="w-full h-full min-h-[400px] object-cover brightness-110 contrast-105"
+                className="w-full h-full min-h-[280px] max-h-[380px] object-cover brightness-110 contrast-105"
                 loading="lazy"
               />
             </div>
