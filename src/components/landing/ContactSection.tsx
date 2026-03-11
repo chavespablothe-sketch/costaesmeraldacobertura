@@ -16,7 +16,7 @@ const ContactSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://wa.me/5548999999999?text=Olá! Tenho interesse na cobertura duplex do Costa Esmeralda."
+            href="https://wa.me/5548984238877?text=Olá! Tenho interesse na cobertura duplex do Costa Esmeralda."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] text-white font-sans text-sm tracking-widest uppercase hover:bg-[#20bd5a] transition-colors"
