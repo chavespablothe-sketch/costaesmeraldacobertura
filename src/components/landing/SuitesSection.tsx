@@ -1,6 +1,5 @@
 import bedroom from "@/assets/property/bedroom.jpg";
 import bathroom from "@/assets/property/bathroom.jpg";
-import suite3Room from "@/assets/property/suite3-room.png";
 
 const suites = [
   {
@@ -20,8 +19,8 @@ const suites = [
     title: "Suíte 03",
     subtitle: "com Hidromassagem",
     desc: "Reversível em estar social + lavabo do Ático. Um espaço inteligente que se adapta ao seu estilo de vida.",
-    img: suite3Room,
-    alt: "Suíte 03 — reversível em estar social",
+    img: null,
+    alt: "",
   },
 ];
 
@@ -41,14 +40,16 @@ const SuitesSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {suites.map((suite) => (
             <div key={suite.title} className="group">
-              <div className="overflow-hidden mb-4">
-                <img
-                  src={suite.img}
-                  alt={suite.alt}
-                  className="w-full h-[300px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
+              {suite.img && (
+                <div className="overflow-hidden mb-4">
+                  <img
+                    src={suite.img}
+                    alt={suite.alt}
+                    className="w-full h-[300px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              )}
               <h3 className="text-xl font-serif text-foreground mb-1">
                 {suite.title}
               </h3>
