@@ -6,20 +6,12 @@ import interior1 from "@/assets/property/interior1.jpg";
 import interior2 from "@/assets/property/interior2.jpg";
 import living from "@/assets/property/living.jpg";
 import livingView from "@/assets/property/living-view.png";
-import kitchen from "@/assets/property/kitchen.jpg";
-import bedroom from "@/assets/property/bedroom.jpg";
-import bathroom from "@/assets/property/bathroom.jpg";
-import suite3Room from "@/assets/property/suite3-room.png";
-import luzNatural from "@/assets/property/luz-natural.png";
 import gallery1 from "@/assets/property/gallery1.jpg";
 import gallery2 from "@/assets/property/gallery2.jpg";
-import gallery3 from "@/assets/property/gallery3.jpg";
 import gallery5 from "@/assets/property/gallery5.jpg";
 import jacuzzi from "@/assets/property/jacuzzi.jpg";
 import balcony from "@/assets/property/balcony.jpg";
 import terrace from "@/assets/property/terrace.jpg";
-import staircase from "@/assets/property/staircase.jpg";
-import gourmetSpace from "@/assets/property/gourmet-space.png";
 import salao1 from "@/assets/property/salao1.jpg";
 import salao2 from "@/assets/property/salao2.jpg";
 
@@ -27,18 +19,10 @@ const images = [
   { src: view, alt: "Vista panorâmica — varanda do Ático" },
   { src: living, alt: "Sala de estar" },
   { src: livingView, alt: "Sala de estar com vista" },
-  { src: kitchen, alt: "Cozinha planejada Formaplas" },
   { src: interior1, alt: "Estar social com vista para o mar" },
   { src: interior2, alt: "Estar social — outro ângulo" },
-  { src: luzNatural, alt: "Luz natural — integração dos ambientes" },
-  { src: bedroom, alt: "Suíte Master" },
-  { src: bathroom, alt: "Banheiro com hidromassagem" },
-  { src: suite3Room, alt: "Suíte 03 — quarto reversível" },
-  { src: gallery3, alt: "Suíte — detalhe" },
   { src: gallery2, alt: "Cozinha — detalhe" },
-  { src: staircase, alt: "Escadaria de acesso ao Ático" },
   { src: gallery5, alt: "Cozinha e Churrasqueira do Ático" },
-  { src: gourmetSpace, alt: "Espaço Gourmet do Ático" },
   { src: jacuzzi, alt: "Jacuzzi instalada — Ático" },
   { src: terrace, alt: "Varanda privativa do Ático" },
   { src: balcony, alt: "Varanda privativa — outro ângulo" },
