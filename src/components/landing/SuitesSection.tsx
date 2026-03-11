@@ -1,7 +1,6 @@
 import bedroom from "@/assets/property/bedroom.jpg";
 import bathroom from "@/assets/property/bathroom.jpg";
 import suite3Room from "@/assets/property/suite3-room.png";
-import gallery4 from "@/assets/property/gallery4.jpg";
 
 const suites = [
   {
@@ -23,10 +22,6 @@ const suites = [
     desc: "Reversível em estar social + lavabo do Ático. Um espaço inteligente que se adapta ao seu estilo de vida.",
     img: suite3Room,
     alt: "Suíte 03 — reversível em estar social",
-    detail: {
-      img: gallery4,
-      alt: "Suíte 03 — banheiro com hidromassagem",
-    },
   },
 ];
 
@@ -65,16 +60,6 @@ const SuitesSection = () => {
               <p className="text-sm font-sans text-muted-foreground leading-relaxed">
                 {suite.desc}
               </p>
-              {suite.detail && (
-                <div className="overflow-hidden mt-4">
-                  <img
-                    src={suite.detail.img}
-                    alt={suite.detail.alt}
-                    className="w-full h-[200px] object-cover brightness-110 contrast-110 saturate-110"
-                    loading="lazy"
-                  />
-                </div>
-              )}
             </div>
           ))}
         </div>

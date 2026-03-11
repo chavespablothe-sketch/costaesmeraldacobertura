@@ -9,6 +9,7 @@ import AticoSection from "@/components/landing/AticoSection";
 import GallerySection from "@/components/landing/GallerySection";
 import FloorplanSection from "@/components/landing/FloorplanSection";
 import MarketSection from "@/components/landing/MarketSection";
+import PricingSection from "@/components/landing/PricingSection";
 import ContactSection from "@/components/landing/ContactSection";
 
 const SectionDivider = ({ variant = "light" }: { variant?: "light" | "dark" }) => (
@@ -34,6 +35,7 @@ const Index = () => {
       <GallerySection />
       <FloorplanSection />
       <MarketSection />
+      <PricingSection />
       <ContactSection />
     </main>
   );
