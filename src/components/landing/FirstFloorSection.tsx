@@ -1,4 +1,3 @@
-import luzNatural from "@/assets/property/luz-natural.png";
 import livingViewImg from "@/assets/property/living-view.png";
 import kitchen from "@/assets/property/kitchen.jpg";
 
