@@ -17,6 +17,7 @@ const Index = () => {
   return (
     <main className="overflow-x-hidden">
       <HeroSection />
+      <MasterpieceSection />
       <OverviewSection />
       <LocationSection />
       <FirstFloorSection />
