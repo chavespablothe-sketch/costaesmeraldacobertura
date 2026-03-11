@@ -1,5 +1,5 @@
 import { Trees, ShoppingBag, Landmark, UtensilsCrossed } from "lucide-react";
-import locationImg from "@/assets/property/location.jpg";
+import locationMapImg from "@/assets/property/location-map.png";
 
 const highlights = [
   {
