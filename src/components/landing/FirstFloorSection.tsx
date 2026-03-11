@@ -5,7 +5,7 @@ const FirstFloorSection = () => {
   return (
     <section className="bg-background">
       {/* Luz Natural e Fluidez */}
-      <div className="py-20 md:py-32 px-6 md:px-16 lg:px-24">
+      <div className="py-24 md:py-36 px-6 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto fade-section">
           <div className="border border-border p-6 md:p-12">
             <img
