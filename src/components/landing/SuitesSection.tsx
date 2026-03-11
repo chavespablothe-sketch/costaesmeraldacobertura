@@ -40,16 +40,14 @@ const SuitesSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {suites.map((suite) => (
             <div key={suite.title} className="group">
-              {suite.img && (
-                <div className="overflow-hidden mb-4">
-                  <img
-                    src={suite.img}
-                    alt={suite.alt}
-                    className="w-full h-[300px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-              )}
+              <div className="overflow-hidden mb-4">
+                <img
+                  src={suite.img}
+                  alt={suite.alt}
+                  className="w-full h-[300px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="text-xl font-serif text-foreground mb-1">
                 {suite.title}
               </h3>
