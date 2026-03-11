@@ -1,13 +1,5 @@
-import { MapPin, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import heroImg from "@/assets/property/hero.jpg";
-
-const highlights = [
-  "Cobertura Duplex",
-  "Vista pro Mar",
-  "3 Suítes*",
-  "282m² Totais",
-  "Ático com Churrasqueira",
-];
 
 const HeroSection = () => {
   return (
@@ -15,50 +7,41 @@ const HeroSection = () => {
       <img
         src={heroImg}
         alt="Cobertura Duplex Costa Esmeralda — vista panorâmica para o mar"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover brightness-105 contrast-105"
         loading="eager"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-      <div className="relative z-10 flex flex-col justify-end h-full px-6 pb-16 md:px-16 lg:px-24 max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-4 text-primary-foreground/80">
-          <MapPin className="w-4 h-4" />
-          <span className="text-sm font-sans tracking-widest uppercase">
-            Agronômica, Florianópolis
-          </span>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-sm md:text-base font-sans tracking-[0.3em] uppercase text-white/70 mb-6">
+            Residencial Costa Esmeralda · Agronômica, Florianópolis
+          </p>
+
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold text-white leading-tight mb-2">
+            A Joia da Agronômica:
+          </h1>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-tight mb-8">
+            <span className="italic font-normal">Exclusividade e Vista Definitiva</span>
+          </h1>
+
+          <div className="w-16 h-[3px] bg-secondary mx-auto mb-8" />
+
+          <p className="text-lg md:text-xl text-white/80 font-sans font-light max-w-2xl mx-auto mb-12">
+            Uma cobertura duplex onde o luxo encontra a inteligência financeira.
+          </p>
+
+          <a
+            href="#contato"
+            className="inline-flex items-center px-10 py-4 bg-secondary text-secondary-foreground font-sans text-sm tracking-[0.2em] uppercase hover:bg-secondary/90 transition-colors"
+          >
+            Falar com Corretor
+          </a>
         </div>
-
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold text-white leading-tight mb-4">
-          Oportunidade em Floripa,
-          <br />
-          <span className="italic font-normal">com linda vista pro mar.</span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-white/80 font-sans font-light max-w-xl mb-8">
-          E com o charme de uma cobertura duplex.
-        </p>
-
-        <div className="flex flex-wrap gap-3 mb-10">
-          {highlights.map((h) => (
-            <span
-              key={h}
-              className="px-4 py-2 text-xs md:text-sm font-sans tracking-wide uppercase border border-white/30 text-white/90 rounded-sm backdrop-blur-sm"
-            >
-              {h}
-            </span>
-          ))}
-        </div>
-
-        <a
-          href="#contato"
-          className="inline-flex items-center self-start px-8 py-4 bg-secondary text-secondary-foreground font-sans text-sm tracking-widest uppercase hover:bg-secondary/90 transition-colors"
-        >
-          Falar com Corretor
-        </a>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-white/60" />
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <ChevronDown className="w-6 h-6 text-white/50" />
       </div>
     </section>
   );
