@@ -1,5 +1,5 @@
 import { Trees, ShoppingBag, Landmark, UtensilsCrossed } from "lucide-react";
-import locationImg from "@/assets/property/location.jpg";
+import locationMapImg from "@/assets/property/location-map.png";
 
 const highlights = [
   {
@@ -66,7 +66,7 @@ const LocationSection = () => {
           </div>
           <div>
             <img
-              src={locationImg}
+              src={locationMapImg}
               alt="Localização do Residencial Costa Esmeralda na Agronômica"
               className="w-full h-[350px] object-cover brightness-105 contrast-105 opacity-80"
               loading="lazy"
