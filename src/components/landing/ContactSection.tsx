@@ -25,7 +25,7 @@ const ContactSection = () => {
             WhatsApp
           </a>
           <a
-            href="tel:+5548999999999"
+            href="tel:+5548984238877"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-white/30 text-white font-sans text-sm tracking-widest uppercase hover:bg-white/10 transition-colors"
           >
             <Phone className="w-5 h-5" />
