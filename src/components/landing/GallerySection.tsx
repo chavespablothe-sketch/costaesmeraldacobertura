@@ -16,23 +16,29 @@ import gallery3 from "@/assets/property/gallery3.jpg";
 import gallery4 from "@/assets/property/gallery4.jpg";
 import gallery5 from "@/assets/property/gallery5.jpg";
 import gallery6 from "@/assets/property/gallery6.jpg";
+import jacuzzi from "@/assets/property/jacuzzi.jpg";
+import salao1 from "@/assets/property/salao1.jpg";
+import salao2 from "@/assets/property/salao2.jpg";
 
 const images = [
-  { src: interior1, alt: "Sala de estar", span: "col-span-2 row-span-2" },
-  { src: kitchen, alt: "Cozinha", span: "" },
-  { src: staircase, alt: "Escada", span: "" },
-  { src: bedroom, alt: "Suíte", span: "" },
-  { src: terrace, alt: "Terraço", span: "col-span-2" },
-  { src: bathroom, alt: "Banheiro", span: "" },
-  { src: view, alt: "Vista", span: "" },
-  { src: balcony, alt: "Varanda", span: "" },
-  { src: interior2, alt: "Interior", span: "" },
-  { src: gallery1, alt: "Galeria 1", span: "" },
-  { src: gallery2, alt: "Galeria 2", span: "" },
-  { src: gallery3, alt: "Galeria 3", span: "col-span-2" },
-  { src: gallery4, alt: "Galeria 4", span: "" },
-  { src: gallery5, alt: "Galeria 5", span: "" },
-  { src: gallery6, alt: "Galeria 6", span: "" },
+  { src: interior1, alt: "Vista da sala de estar", span: "col-span-2 row-span-2" },
+  { src: staircase, alt: "Estar social e acesso para o Ático", span: "" },
+  { src: kitchen, alt: "Cozinha 01 — Formaplas + Eletrodomésticos", span: "" },
+  { src: gallery2, alt: "Cozinha — detalhe", span: "" },
+  { src: bedroom, alt: "Suíte 01", span: "" },
+  { src: bathroom, alt: "Suíte 02, com hidromassagem", span: "" },
+  { src: gallery3, alt: "Suíte 03, reversível em estar social", span: "" },
+  { src: gallery4, alt: "Suíte 03 — banheiro com hidromassagem", span: "" },
+  { src: gallery5, alt: "Cozinha 02 e Churrasqueira do Ático", span: "col-span-2" },
+  { src: gallery6, alt: "Churrasqueira do Ático — Formaplas", span: "" },
+  { src: jacuzzi, alt: "Jacuzzi instalada — Ático", span: "" },
+  { src: terrace, alt: "Varanda privativa do Ático", span: "" },
+  { src: balcony, alt: "Varanda privativa do Ático", span: "" },
+  { src: view, alt: "Vista panorâmica — varanda do Ático", span: "col-span-2" },
+  { src: interior2, alt: "Vista da sala de estar", span: "" },
+  { src: gallery1, alt: "Vista da sala de estar", span: "" },
+  { src: salao1, alt: "Salão de Festas", span: "" },
+  { src: salao2, alt: "Salão de Festas", span: "" },
 ];
 
 const GallerySection = () => {
@@ -80,11 +86,14 @@ const GallerySection = () => {
           >
             <X className="w-8 h-8" />
           </button>
-          <img
-            src={images[selected].src}
-            alt={images[selected].alt}
-            className="max-w-full max-h-[90vh] object-contain"
-          />
+          <div className="text-center">
+            <img
+              src={images[selected].src}
+              alt={images[selected].alt}
+              className="max-w-full max-h-[80vh] object-contain"
+            />
+            <p className="text-white/70 font-sans text-sm mt-4">{images[selected].alt}</p>
+          </div>
         </div>
       )}
     </section>

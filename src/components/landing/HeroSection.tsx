@@ -3,10 +3,10 @@ import heroImg from "@/assets/property/hero.jpg";
 
 const highlights = [
   "Cobertura Duplex",
-  "Vista Privilegiada",
+  "Vista pro Mar",
   "3 Suítes*",
-  "Espaços Amplos",
-  "Área Social no Ático",
+  "282m² Totais",
+  "Ático com Churrasqueira",
 ];
 
 const HeroSection = () => {
@@ -14,7 +14,7 @@ const HeroSection = () => {
     <section className="relative h-screen w-full overflow-hidden">
       <img
         src={heroImg}
-        alt="Cobertura Duplex Costa Esmeralda — vista panorâmica"
+        alt="Cobertura Duplex Costa Esmeralda — vista panorâmica para o mar"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
       />
@@ -29,13 +29,13 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold text-white leading-tight mb-4">
-          Cobertura Duplex
+          Oportunidade em Floripa,
           <br />
-          <span className="italic font-normal">Exclusiva</span>
+          <span className="italic font-normal">com linda vista pro mar.</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/80 font-sans font-light max-w-xl mb-8">
-          Uma penthouse sofisticada projetada para conforto, amplitude e estilo de vida.
+          E com o charme de uma cobertura duplex.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-10">

@@ -1,12 +1,14 @@
-import { Building2, Maximize, Sun, Bed, LayoutGrid, PartyPopper } from "lucide-react";
+import { Building2, Maximize, Sun, Bed, LayoutGrid, PartyPopper, Car, ShieldCheck } from "lucide-react";
 
 const features = [
-  { icon: Building2, title: "Cobertura Duplex", desc: "Dois pavimentos com ambientes integrados e pé-direito generoso." },
-  { icon: Maximize, title: "Ambientes Amplos", desc: "Espaços projetados para fluidez e conforto no dia a dia." },
-  { icon: PartyPopper, title: "Área Social no Ático", desc: "Terraço, churrasqueira e jacuzzi com vista panorâmica." },
-  { icon: Sun, title: "Vista Aberta", desc: "Orientação solar privilegiada e vista para o mar e a cidade." },
-  { icon: Bed, title: "Suítes Confortáveis", desc: "Suítes amplas com closet e banheiros com acabamento premium." },
-  { icon: LayoutGrid, title: "Layout Funcional", desc: "Planta inteligente que separa áreas social e íntima." },
+  { icon: Building2, title: "Cobertura Duplex", desc: "Dois pavimentos com ambientes integrados e acabamento de alto padrão." },
+  { icon: Maximize, title: "282m² Totais", desc: "206m² de área privativa distribuídos em dois pavimentos generosos." },
+  { icon: PartyPopper, title: "Ático Completo", desc: "Churrasqueira, cozinha gourmet, jacuzzi e varanda com vista panorâmica." },
+  { icon: Sun, title: "Vista para o Mar", desc: "Vista livre para o mar e a Avenida Beira-mar Norte." },
+  { icon: Bed, title: "3 Suítes*", desc: "Suítes amplas, incluindo suíte com hidromassagem." },
+  { icon: LayoutGrid, title: "2 Cozinhas Formaplas", desc: "Cozinha principal equipada com eletrodomésticos Spicy + cozinha no ático." },
+  { icon: Car, title: "2 Vagas + Hobby Box", desc: "Vagas livres para carros grandes, mais hobby box privativo." },
+  { icon: ShieldCheck, title: "Terraço Telado", desc: "Segurança para crianças e pets com terraço todo telado." },
 ];
 
 const FeaturesSection = () => {
@@ -22,7 +24,7 @@ const FeaturesSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {features.map((f) => (
             <div
               key={f.title}
@@ -36,7 +38,7 @@ const FeaturesSection = () => {
         </div>
 
         <p className="text-center text-sm text-muted-foreground font-sans mt-10 italic">
-          *O living no ático é reversível para uma terceira suíte.
+          *O living no ático é reversível para uma terceira suíte, com banheiro com hidromassagem.
         </p>
       </div>
     </section>

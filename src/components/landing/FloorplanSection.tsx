@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import floorplan1 from "@/assets/property/floorplan1.jpg";
-import floorplan2 from "@/assets/property/floorplan2.jpg";
+import floorplan1 from "@/assets/property/floorplan1.png";
+import floorplan2 from "@/assets/property/floorplan2.png";
 
 const FloorplanSection = () => {
   const [zoomed, setZoomed] = useState<string | null>(null);
@@ -20,8 +20,18 @@ const FloorplanSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {[
-            { src: floorplan1, label: "Pavimento 1 — Área Íntima", desc: "Suítes, home office e circulação privativa." },
-            { src: floorplan2, label: "Pavimento 2 — Ático", desc: "Living, cozinha gourmet, terraço e jacuzzi." },
+            {
+              src: floorplan1,
+              label: "Primeiro Pavimento",
+              desc: "Sala de estar, cozinha e área de serviço, lavabo, duas suítes.",
+              detail: "Vista para o mar (Av. Beira-mar Norte)"
+            },
+            {
+              src: floorplan2,
+              label: "Segundo Pavimento — Ático",
+              desc: "Varanda externa, churrasqueira e cozinha, lavabo, banheiro com banheira, estar reversível em 3ª suíte.",
+              detail: "Vista para o mar (Av. Beira-mar Norte)"
+            },
           ].map((fp) => (
             <div key={fp.label} className="group">
               <div
@@ -37,6 +47,7 @@ const FloorplanSection = () => {
               </div>
               <h3 className="text-lg font-serif mt-4 text-foreground">{fp.label}</h3>
               <p className="text-sm font-sans text-muted-foreground">{fp.desc}</p>
+              <p className="text-xs font-sans text-secondary mt-1 italic">{fp.detail}</p>
             </div>
           ))}
         </div>
