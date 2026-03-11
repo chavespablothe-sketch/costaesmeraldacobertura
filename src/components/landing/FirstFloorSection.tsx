@@ -43,11 +43,14 @@ const FirstFloorSection = () => {
                   282 m² de Área Total<br />206 m² de Área Privativa
                 </p>
               </div>
-              <p className="text-sm font-sans text-primary-foreground/70 leading-relaxed">
-                Um estar social banhado por luz natural, projetado para o conforto diário.
-                O piso inferior concentra a vida familiar, garantindo isolamento acústico
-                e tranquilidade, contemplando lavabo, área de serviço e o corredor de acesso às suítes.
-              </p>
+              <div className="text-sm font-sans text-primary-foreground/70 leading-relaxed space-y-4">
+                <p>
+                  Considerando o valor médio do metro quadrado em Florianópolis — atualmente na faixa de R$&nbsp;12&nbsp;mil a R$&nbsp;13&nbsp;mil, segundo dados do índice FipeZap — e levando em conta que regiões nobres como Agronômica e Beira-Mar Norte frequentemente superam essa média, o valor apresentado posiciona o imóvel como uma oportunidade relevante de mercado.
+                </p>
+                <p>
+                  Em imóveis de padrão semelhante e localização comparável, os valores por metro quadrado costumam ultrapassar a média da cidade, especialmente em unidades próximas à orla e com boa metragem. Nesse contexto, o apartamento se destaca como uma alternativa interessante para quem busca localização privilegiada.
+                </p>
+              </div>
             </div>
             <div>
               <img
