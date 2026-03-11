@@ -1,6 +1,6 @@
 import staircase from "@/assets/property/staircase.jpg";
 import gallery5 from "@/assets/property/gallery5.jpg";
-import gallery6 from "@/assets/property/gallery6.jpg";
+import gourmetSpace from "@/assets/property/gourmet-space.png";
 import gallery3 from "@/assets/property/gallery3.jpg";
 
 const AticoSection = () => {
