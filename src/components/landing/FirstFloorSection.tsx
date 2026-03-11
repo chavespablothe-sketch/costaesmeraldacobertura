@@ -1,3 +1,4 @@
+import luzNatural from "@/assets/property/luz-natural.png";
 import interior1 from "@/assets/property/interior1.jpg";
 import kitchen from "@/assets/property/kitchen.jpg";
 
@@ -9,7 +10,7 @@ const FirstFloorSection = () => {
         <div className="max-w-7xl mx-auto fade-section">
           <div className="border border-border p-6 md:p-12">
             <img
-              src={interior1}
+              src={luzNatural}
               alt="Vista da sala de estar com luz natural e vista para o mar"
               className="w-full h-[350px] md:h-[500px] object-cover brightness-110 contrast-105 mb-8"
               loading="lazy"
