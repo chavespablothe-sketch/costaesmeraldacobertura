@@ -1,6 +1,6 @@
 import bedroom from "@/assets/property/bedroom.jpg";
 import bathroom from "@/assets/property/bathroom.jpg";
-import gallery3 from "@/assets/property/gallery3.jpg";
+import suite3Room from "@/assets/property/suite3-room.png";
 import gallery4 from "@/assets/property/gallery4.jpg";
 
 const suites = [
