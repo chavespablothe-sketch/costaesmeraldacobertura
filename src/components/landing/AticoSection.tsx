@@ -1,7 +1,7 @@
 import staircase from "@/assets/property/staircase.jpg";
 import gallery5 from "@/assets/property/gallery5.jpg";
-import terrace from "@/assets/property/terrace.jpg";
-import bedroom from "@/assets/property/bedroom.jpg";
+import gallery6 from "@/assets/property/gallery6.jpg";
+import gallery3 from "@/assets/property/gallery3.jpg";
 
 const AticoSection = () => {
   return (
@@ -15,8 +15,8 @@ const AticoSection = () => {
                 src={staircase}
                 alt="Escadaria de acesso ao Ático"
                 className="w-full h-full min-h-[320px] max-h-[420px] object-cover object-center brightness-110 contrast-105 saturate-110"
-                loading="lazy"
-              />
+                loading="lazy" />
+              
             </div>
             <div className="flex flex-col justify-center px-8 md:px-16 py-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground mb-6 italic">
@@ -56,23 +56,23 @@ const AticoSection = () => {
                 src={gallery5}
                 alt="Cozinha do Ático com churrasqueira e vista"
                 className="w-full h-[280px] object-cover brightness-110 contrast-105"
-                loading="lazy"
-              />
+                loading="lazy" />
+              
             </div>
 
-            <div className="border border-primary-foreground/10 p-6">
-              <h3 className="text-2xl font-serif text-center mb-3">A 3ª Suíte</h3>
-              <p className="text-sm font-sans text-primary-foreground/60 text-center leading-relaxed mb-6">
-                Alternativamente, o espaço é inteligentemente reversível para uma terceira
-                suíte máster, completa com hidromassagem exclusiva.
-              </p>
-              <img
-                src={bedroom}
-                alt="Terceira suíte reversível com banheiro e hidromassagem"
-                className="w-full h-[280px] object-cover brightness-110 contrast-105"
-                loading="lazy"
-              />
-            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+            
           </div>
         </div>
       </div>
@@ -80,12 +80,12 @@ const AticoSection = () => {
       {/* Espaço Gourmet */}
       <div className="py-0">
         <div className="fade-section">
-            <img
-             src={terrace}
-             alt="Espaço gourmet do Ático com churrasqueira e vista panorâmica"
+          <img
+            src={gallery6}
+            alt="Espaço gourmet do Ático com churrasqueira e vista panorâmica"
             className="w-full h-[400px] md:h-[550px] object-cover brightness-110 contrast-105"
-            loading="lazy"
-          />
+            loading="lazy" />
+          
           <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 py-12">
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <h2 className="text-3xl md:text-4xl font-serif text-foreground">
@@ -100,8 +100,8 @@ const AticoSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AticoSection;
