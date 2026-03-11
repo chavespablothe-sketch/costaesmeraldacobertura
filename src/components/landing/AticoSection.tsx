@@ -1,7 +1,7 @@
 import staircase from "@/assets/property/staircase.jpg";
 import gallery5 from "@/assets/property/gallery5.jpg";
-import gallery6 from "@/assets/property/gallery6.jpg";
-import gallery3 from "@/assets/property/gallery3.jpg";
+import terrace from "@/assets/property/terrace.jpg";
+import bedroom from "@/assets/property/bedroom.jpg";
 
 const AticoSection = () => {
   return (
@@ -67,7 +67,7 @@ const AticoSection = () => {
                 suíte máster, completa com hidromassagem exclusiva.
               </p>
               <img
-                src={gallery3}
+                src={bedroom}
                 alt="Terceira suíte reversível com banheiro e hidromassagem"
                 className="w-full h-[280px] object-cover brightness-110 contrast-105"
                 loading="lazy"
@@ -80,9 +80,9 @@ const AticoSection = () => {
       {/* Espaço Gourmet */}
       <div className="py-0">
         <div className="fade-section">
-          <img
-            src={gallery6}
-            alt="Espaço gourmet do Ático com churrasqueira e vista panorâmica"
+            <img
+             src={terrace}
+             alt="Espaço gourmet do Ático com churrasqueira e vista panorâmica"
             className="w-full h-[400px] md:h-[550px] object-cover brightness-110 contrast-105"
             loading="lazy"
           />

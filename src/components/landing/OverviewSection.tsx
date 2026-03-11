@@ -1,11 +1,10 @@
-import livingViewImg from "@/assets/property/living-view.png";
+import hero2Img from "@/assets/property/hero2.jpg";
 
 const stats = [
   { value: "16", desc: "Unidades no total.\nA exclusividade de não ser apenas mais um." },
   { value: "02", desc: "Apartamentos por andar.\nPrivacidade absoluta." },
   { value: "02", desc: "Vagas de garagem amplas (livres)\n+ Hobby Box privativo." },
 ];
-
 const OverviewSection = () => {
   return (
     <section className="py-20 md:py-32 px-6 md:px-16 lg:px-24 bg-background">
@@ -24,7 +23,7 @@ const OverviewSection = () => {
             <div className="space-y-8 mt-10">
               {stats.map((s) => (
                 <div key={s.value + s.desc} className="flex items-start gap-6">
-                  <span className="text-5xl md:text-6xl font-serif text-secondary font-semibold leading-none min-w-[80px]">
+                  <span className="text-5xl md:text-6xl font-serif text-secondary font-bold leading-none min-w-[80px] drop-shadow-sm">
                     {s.value}
                   </span>
                   <p className="text-sm md:text-base font-sans text-muted-foreground leading-relaxed whitespace-pre-line pt-2">
@@ -43,7 +42,7 @@ const OverviewSection = () => {
 
           <div className="relative">
             <img
-              src={livingViewImg}
+              src={hero2Img}
               alt="Fachada do Residencial Costa Esmeralda"
               className="w-full h-[500px] md:h-[600px] object-cover brightness-110 contrast-110 saturate-110"
               loading="lazy"

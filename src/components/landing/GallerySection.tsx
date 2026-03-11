@@ -3,42 +3,30 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 import interior1 from "@/assets/property/interior1.jpg";
 import interior2 from "@/assets/property/interior2.jpg";
-import staircase from "@/assets/property/staircase.jpg";
-import kitchen from "@/assets/property/kitchen.jpg";
-import bedroom from "@/assets/property/bedroom.jpg";
-import bathroom from "@/assets/property/bathroom.jpg";
-import terrace from "@/assets/property/terrace.jpg";
-import balcony from "@/assets/property/balcony.jpg";
 import view from "@/assets/property/view.jpg";
 import gallery1 from "@/assets/property/gallery1.jpg";
 import gallery2 from "@/assets/property/gallery2.jpg";
-import gallery3 from "@/assets/property/gallery3.jpg";
-import gallery4 from "@/assets/property/gallery4.jpg";
 import gallery5 from "@/assets/property/gallery5.jpg";
 import gallery6 from "@/assets/property/gallery6.jpg";
 import jacuzzi from "@/assets/property/jacuzzi.jpg";
 import salao1 from "@/assets/property/salao1.jpg";
 import salao2 from "@/assets/property/salao2.jpg";
+import balcony from "@/assets/property/balcony.jpg";
+import terrace from "@/assets/property/terrace.jpg";
 
 const images = [
   { src: view, alt: "Vista panorâmica — varanda do Ático" },
   { src: interior1, alt: "Estar social com vista para o mar" },
-  { src: kitchen, alt: "Cozinha Formaplas + Eletrodomésticos Spicy" },
   { src: gallery2, alt: "Cozinha — detalhe" },
-  { src: bedroom, alt: "Suíte 01" },
-  { src: bathroom, alt: "Suíte 02, com hidromassagem" },
-  { src: gallery3, alt: "Suíte 03, reversível em estar social" },
-  { src: gallery4, alt: "Suíte 03 — banheiro com hidromassagem" },
-  { src: staircase, alt: "Escadaria de acesso ao Ático" },
   { src: gallery5, alt: "Cozinha e Churrasqueira do Ático" },
   { src: gallery6, alt: "Churrasqueira do Ático — Formaplas" },
   { src: jacuzzi, alt: "Jacuzzi instalada — Ático" },
   { src: terrace, alt: "Varanda privativa do Ático" },
-  { src: balcony, alt: "Varanda privativa do Ático" },
+  { src: balcony, alt: "Varanda privativa — outro ângulo" },
   { src: interior2, alt: "Estar social" },
   { src: gallery1, alt: "Vista da sala de estar" },
   { src: salao1, alt: "Salão de Festas" },
-  { src: salao2, alt: "Salão de Festas" },
+  { src: salao2, alt: "Salão de Festas — outro ângulo" },
 ];
 
 const GallerySection = () => {
@@ -93,7 +81,7 @@ const GallerySection = () => {
         </div>
 
         {/* Remaining grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-3">
           {images.slice(3).map((img, i) => (
             <div
               key={i + 3}
@@ -103,7 +91,7 @@ const GallerySection = () => {
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-[200px] md:h-[220px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-[200px] md:h-[250px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
             </div>

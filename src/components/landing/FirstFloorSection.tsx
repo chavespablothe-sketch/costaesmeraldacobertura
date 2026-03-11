@@ -1,5 +1,5 @@
 import luzNatural from "@/assets/property/luz-natural.png";
-import interior1 from "@/assets/property/interior1.jpg";
+import livingViewImg from "@/assets/property/living-view.png";
 import kitchen from "@/assets/property/kitchen.jpg";
 
 const FirstFloorSection = () => {
@@ -52,7 +52,7 @@ const FirstFloorSection = () => {
             </div>
             <div>
               <img
-                src={interior1}
+                src={livingViewImg}
                 alt="Estar social banhado por luz natural com vista para o mar"
                 className="w-full h-[400px] md:h-[500px] object-cover brightness-110 contrast-110 saturate-110"
                 loading="lazy" />
