@@ -30,19 +30,20 @@ const PricingSection = () => {
           {/* Market context */}
           <div className="text-sm md:text-base font-sans text-muted-foreground leading-relaxed space-y-4 text-left max-w-2xl mx-auto">
             <p>
-              Considerando o valor médio do m² para imóveis de alto padrão na
-              região da Beira-Mar Norte — atualmente entre R$&nbsp;11.000 e
-              R$&nbsp;12.000 por m² — e levando em conta que se trata de um
-              apartamento com aproximadamente 10 anos de construção, o valor
-              apresentado posiciona o imóvel como uma oportunidade real de
-              mercado.
+              Considerando o valor médio do metro quadrado em Florianópolis
+              — atualmente na faixa de R$&nbsp;12&nbsp;mil a R$&nbsp;13&nbsp;mil,
+              segundo dados do índice FipeZap — e levando em conta que regiões
+              nobres como Agronômica e Beira-Mar Norte frequentemente superam
+              essa média, o valor apresentado posiciona o imóvel como uma
+              oportunidade relevante de mercado.
             </p>
             <p>
-              Imóveis com características semelhantes na região costumam ser
-              negociados dentro ou acima dessa faixa de valor por metro
-              quadrado, o que torna este apartamento uma excelente oportunidade
-              para quem busca localização privilegiada, qualidade construtiva e
-              potencial de valorização.
+              Em imóveis de padrão semelhante e localização comparável, os
+              valores por metro quadrado costumam ultrapassar a média da cidade,
+              especialmente em unidades próximas à orla e com boa metragem.
+              Nesse contexto, o apartamento se destaca como uma alternativa
+              interessante para quem busca localização privilegiada,
+              qualidade construtiva e potencial de valorização.
             </p>
           </div>
 
