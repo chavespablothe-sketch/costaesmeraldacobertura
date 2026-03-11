@@ -1,4 +1,4 @@
-import hero2Img from "@/assets/property/hero2.jpg";
+import buildingImg from "@/assets/property/building.png";
 
 const stats = [
   { value: "16", desc: "Unidades no total.\nA exclusividade de não ser apenas mais um." },
