@@ -60,16 +60,6 @@ const SuitesSection = () => {
               <p className="text-sm font-sans text-muted-foreground leading-relaxed">
                 {suite.desc}
               </p>
-              {suite.detail && (
-                <div className="overflow-hidden mt-4">
-                  <img
-                    src={suite.detail.img}
-                    alt={suite.detail.alt}
-                    className="w-full h-[200px] object-cover brightness-110 contrast-110 saturate-110"
-                    loading="lazy"
-                  />
-                </div>
-              )}
             </div>
           ))}
         </div>
