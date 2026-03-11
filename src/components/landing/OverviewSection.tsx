@@ -23,7 +23,7 @@ const OverviewSection = () => {
             <div className="space-y-8 mt-10">
               {stats.map((s) => (
                 <div key={s.value + s.desc} className="flex items-start gap-6">
-                  <span className="text-5xl md:text-6xl font-serif text-secondary font-semibold leading-none min-w-[80px]">
+                  <span className="text-5xl md:text-6xl font-serif text-secondary font-bold leading-none min-w-[80px] drop-shadow-sm">
                     {s.value}
                   </span>
                   <p className="text-sm md:text-base font-sans text-muted-foreground leading-relaxed whitespace-pre-line pt-2">
