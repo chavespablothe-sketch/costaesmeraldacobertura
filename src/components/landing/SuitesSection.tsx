@@ -1,6 +1,6 @@
 import bedroom from "@/assets/property/bedroom.jpg";
 import bathroom from "@/assets/property/bathroom.jpg";
-
+import suite3Room from "@/assets/property/suite3-room.png";
 const suites = [
   {
     title: "Suíte 01",
