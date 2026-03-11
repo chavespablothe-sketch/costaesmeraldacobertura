@@ -1,11 +1,10 @@
-import livingViewImg from "@/assets/property/living-view.png";
+import hero2Img from "@/assets/property/hero2.jpg";
 
 const stats = [
   { value: "16", desc: "Unidades no total.\nA exclusividade de não ser apenas mais um." },
   { value: "02", desc: "Apartamentos por andar.\nPrivacidade absoluta." },
   { value: "02", desc: "Vagas de garagem amplas (livres)\n+ Hobby Box privativo." },
 ];
-
 const OverviewSection = () => {
   return (
     <section className="py-20 md:py-32 px-6 md:px-16 lg:px-24 bg-background">
