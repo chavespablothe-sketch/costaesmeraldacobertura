@@ -1,5 +1,6 @@
 import staircase from "@/assets/property/staircase.jpg";
-import gallery5 from "@/assets/property/gallery5.jpg";
+import terraceDeck from "@/assets/property/terrace-deck.jpg";
+import jacuzziDeck from "@/assets/property/jacuzzi-deck.jpg";
 import gourmetSpace from "@/assets/property/gourmet-space.png";
 
 const AticoSection = () => {
