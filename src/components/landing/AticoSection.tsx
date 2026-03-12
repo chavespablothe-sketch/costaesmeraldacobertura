@@ -1,5 +1,6 @@
 import staircase from "@/assets/property/staircase.jpg";
-import gallery5 from "@/assets/property/gallery5.jpg";
+import terraceDeck from "@/assets/property/terrace-deck.jpg";
+import jacuzziDeck from "@/assets/property/jacuzzi-deck.jpg";
 import gourmetSpace from "@/assets/property/gourmet-space.png";
 
 const AticoSection = () => {
@@ -53,13 +54,23 @@ const AticoSection = () => {
           {/* Oásis Social — full width hero card */}
           <div className="mb-12">
             <div className="grid md:grid-cols-2 gap-0 items-stretch border border-primary-foreground/10">
-              <div className="overflow-hidden">
-                <img
-                  src={gallery5}
-                  alt="Cozinha do Ático com churrasqueira e vista"
-                  className="w-full h-full min-h-[350px] object-cover brightness-110 contrast-105"
-                  loading="lazy"
-                />
+              <div className="grid grid-cols-2 gap-0">
+                <div className="overflow-hidden">
+                  <img
+                    src={terraceDeck}
+                    alt="Varanda do Ático com deck e pergolado"
+                    className="w-full h-full min-h-[350px] object-cover brightness-110 contrast-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="overflow-hidden">
+                  <img
+                    src={jacuzziDeck}
+                    alt="Jacuzzi na varanda do Ático com vista panorâmica"
+                    className="w-full h-full min-h-[350px] object-cover brightness-110 contrast-105"
+                    loading="lazy"
+                  />
+                </div>
               </div>
               <div className="flex flex-col justify-center p-10 md:p-14">
                 <h3
