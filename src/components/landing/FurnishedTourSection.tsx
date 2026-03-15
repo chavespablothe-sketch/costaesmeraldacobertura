@@ -12,6 +12,16 @@ import furnishedCozinha1 from "@/assets/property/furnished-cozinha1.jpg";
 import furnishedCozinha2 from "@/assets/property/furnished-cozinha2.jpg";
 import furnishedLavabo from "@/assets/property/furnished-lavabo.jpg";
 import furnishedHall from "@/assets/property/furnished-hall.jpg";
+import furnishedQuartoPrincipal1 from "@/assets/property/furnished-quarto-principal1.jpg";
+import furnishedQuartoPrincipal2 from "@/assets/property/furnished-quarto-principal2.jpg";
+import furnishedQuartoPrincipal3 from "@/assets/property/furnished-quarto-principal3.jpg";
+import furnishedBanheiroPrincipal from "@/assets/property/furnished-banheiro-principal.jpg";
+import furnishedQuartoInfantil1 from "@/assets/property/furnished-quarto-infantil1.jpg";
+import furnishedQuartoInfantil2 from "@/assets/property/furnished-quarto-infantil2.jpg";
+import furnishedQuartoInfantil3 from "@/assets/property/furnished-quarto-infantil3.jpg";
+import furnishedHomeTheater from "@/assets/property/furnished-home-theater.jpg";
+import furnishedHomeTheaterAmbiente from "@/assets/property/furnished-home-theater-ambiente.jpg";
+import furnishedEspacoGourmet from "@/assets/property/furnished-espaco-gourmet.jpg";
 
 const slides = [
   { src: furnishedEntrada, label: "Visão da Entrada", sub: "Integração entre cozinha e living" },
@@ -24,6 +34,16 @@ const slides = [
   { src: furnishedCozinha2, label: "Cozinha", sub: "Equipada com eletrodomésticos embutidos" },
   { src: furnishedHall, label: "Hall de Entrada", sub: "Espelho e acesso ao lavabo" },
   { src: furnishedLavabo, label: "Lavabo", sub: "Acabamento em granito" },
+  { src: furnishedQuartoPrincipal2, label: "Suíte Principal", sub: "Ampla com iluminação natural" },
+  { src: furnishedQuartoPrincipal3, label: "Suíte Principal", sub: "Painel em madeira e espelhos" },
+  { src: furnishedQuartoPrincipal1, label: "Suíte Principal", sub: "Integração com banheiro em vidro" },
+  { src: furnishedBanheiroPrincipal, label: "Banheiro da Suíte", sub: "Banheira e acabamento premium" },
+  { src: furnishedQuartoInfantil1, label: "Quarto Infantil", sub: "Beliche e berço planejados" },
+  { src: furnishedQuartoInfantil2, label: "Quarto Infantil", sub: "Decoração lúdica e funcional" },
+  { src: furnishedQuartoInfantil3, label: "Quarto Infantil", sub: "Visão panorâmica do quarto" },
+  { src: furnishedHomeTheater, label: "Home Theater", sub: "Sala com projetor e tela grande" },
+  { src: furnishedHomeTheaterAmbiente, label: "Ambiente do Ático", sub: "Integração copa e estar" },
+  { src: furnishedEspacoGourmet, label: "Espaço Gourmet", sub: "Copa do ático com bancada e adega" },
 ];
 
 const FurnishedTourSection = () => {
