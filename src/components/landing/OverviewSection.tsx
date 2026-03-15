@@ -1,4 +1,4 @@
-import buildingImg from "@/assets/property/building.png";
+import buildingImg from "@/assets/property/building-exterior.jpg";
 
 const stats = [
   { value: "16", desc: "Unidades no total.\nA exclusividade de não ser apenas mais um." },
