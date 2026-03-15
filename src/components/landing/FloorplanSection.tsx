@@ -7,7 +7,7 @@ const FloorplanSection = () => {
   const [zoomed, setZoomed] = useState<string | null>(null);
 
   return (
-    <section className="py-24 md:py-36 px-6 md:px-16 lg:px-24 bg-luxury-warm">
+    <section className="py-24 md:py-36 px-6 md:px-16 lg:px-24 bg-background">
       <div className="max-w-7xl mx-auto fade-section">
         <div className="text-center mb-16">
           <p className="text-sm font-sans tracking-widest uppercase text-muted-foreground mb-4">
