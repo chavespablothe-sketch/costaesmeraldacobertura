@@ -14,15 +14,12 @@ import salao2 from "@/assets/property/salao2.jpg";
 
 const images = [
   { src: view, alt: "Vista panorâmica — varanda do Ático" },
-  { src: living, alt: "Sala de estar" },
   { src: livingView, alt: "Sala de estar com vista" },
   { src: interior1, alt: "Estar social com vista para o mar" },
   { src: gallery2, alt: "Cozinha — detalhe" },
   { src: gallery5, alt: "Cozinha e Churrasqueira do Ático" },
   { src: jacuzzi, alt: "Jacuzzi instalada — Ático" },
   { src: gallery1, alt: "Vista da sala de estar" },
-  { src: salao1, alt: "Salão de Festas" },
-  { src: salao2, alt: "Salão de Festas — outro ângulo" },
 ];
 
 const GallerySection = () => {
