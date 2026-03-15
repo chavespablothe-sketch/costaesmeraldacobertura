@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 import view from "@/assets/property/view.jpg";
@@ -28,10 +28,68 @@ const images = [
 const GallerySection = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
-  const navigate = (dir: number) => {
+  const navigate = useCallback((dir: number) => {
+    setSelected((prev) => {
+      if (prev === null) return null;
+      return (prev + dir + images.length) % images.length;
+    });
+  }, []);
+
+  const close = useCallback(() => setSelected(null), []);
+
+  // Keyboard navigation
+  useEffect(() => {
     if (selected === null) return;
-    setSelected((selected + dir + images.length) % images.length);
-  };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        navigate(1);
+      } else if (e.key === "Escape") {
+        close();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    // Prevent body scroll when lightbox is open
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [selected, navigate, close]);
+
+  // Touch/swipe support for mobile
+  useEffect(() => {
+    if (selected === null) return;
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartX = e.changedTouches[0].screenX;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        navigate(diff > 0 ? 1 : -1);
+      }
+    };
+
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [selected, navigate]);
 
   return (
     <section className="py-24 md:py-36 px-6 md:px-16 lg:px-24 bg-luxury-warm">
@@ -46,16 +104,16 @@ const GallerySection = () => {
         </div>
 
         {/* Modern grid: hero image + smaller grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
           {/* First large image */}
           <div
-            className="cursor-pointer group overflow-hidden md:row-span-2"
+            className="cursor-pointer group overflow-hidden col-span-2 md:col-span-1 md:row-span-2"
             onClick={() => setSelected(0)}
           >
             <img
               src={images[0].src}
               alt={images[0].alt}
-              className="w-full h-full min-h-[400px] md:min-h-[600px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full min-h-[250px] md:min-h-[600px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
             />
           </div>
@@ -69,7 +127,7 @@ const GallerySection = () => {
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-[290px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-[160px] md:h-[290px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -87,7 +145,7 @@ const GallerySection = () => {
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-[200px] md:h-[250px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-[140px] md:h-[250px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -95,40 +153,55 @@ const GallerySection = () => {
         </div>
       </div>
 
-      {/* Lightbox with navigation */}
+      {/* Fullscreen Lightbox */}
       {selected !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-          onClick={() => setSelected(null)}
+          className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+          onClick={close}
         >
+          {/* Close */}
           <button
-            className="absolute top-6 right-6 text-white/70 hover:text-white z-10"
-            onClick={() => setSelected(null)}
+            className="absolute top-4 right-4 md:top-6 md:right-6 text-white/60 hover:text-white z-10 p-2"
+            onClick={close}
+            aria-label="Fechar"
           >
-            <X className="w-8 h-8" />
+            <X className="w-7 h-7 md:w-8 md:h-8" />
           </button>
+
+          {/* Prev */}
           <button
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white z-10"
+            className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white z-10 p-2 md:p-3 rounded-full hover:bg-white/10 transition-colors"
             onClick={(e) => { e.stopPropagation(); navigate(-1); }}
+            aria-label="Foto anterior"
           >
-            <ChevronLeft className="w-10 h-10" />
+            <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
           </button>
+
+          {/* Next */}
           <button
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white z-10"
+            className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white z-10 p-2 md:p-3 rounded-full hover:bg-white/10 transition-colors"
             onClick={(e) => { e.stopPropagation(); navigate(1); }}
+            aria-label="Próxima foto"
           >
-            <ChevronRight className="w-10 h-10" />
+            <ChevronRight className="w-8 h-8 md:w-10 md:h-10" />
           </button>
-          <div className="text-center" onClick={(e) => e.stopPropagation()}>
+
+          {/* Image */}
+          <div className="w-full h-full flex flex-col items-center justify-center px-12 md:px-20" onClick={(e) => e.stopPropagation()}>
             <img
               src={images[selected].src}
               alt={images[selected].alt}
-              className="max-w-full max-h-[80vh] object-contain"
+              className="max-w-full max-h-[85vh] object-contain select-none"
+              draggable={false}
             />
-            <p className="text-white/60 font-sans text-sm mt-4">
-              {images[selected].alt}
-              <span className="ml-3 text-white/30">{selected + 1} / {images.length}</span>
-            </p>
+            <div className="mt-4 text-center">
+              <p className="text-white/70 font-sans text-sm">
+                {images[selected].alt}
+              </p>
+              <p className="text-white/30 font-sans text-xs mt-1">
+                {selected + 1} / {images.length} — Use ← → para navegar
+              </p>
+            </div>
           </div>
         </div>
       )}
