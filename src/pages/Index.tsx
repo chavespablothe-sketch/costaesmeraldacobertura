@@ -6,6 +6,7 @@ import LocationSection from "@/components/landing/LocationSection";
 import FirstFloorSection from "@/components/landing/FirstFloorSection";
 import SuitesSection from "@/components/landing/SuitesSection";
 import AticoSection from "@/components/landing/AticoSection";
+import FurnishedTourSection from "@/components/landing/FurnishedTourSection";
 import GallerySection from "@/components/landing/GallerySection";
 import FloorplanSection from "@/components/landing/FloorplanSection";
 import MarketSection from "@/components/landing/MarketSection";
