@@ -189,7 +189,10 @@ const FurnishedTourSection = () => {
                 className="flex-[0_0_100%] min-w-0"
               >
                 <div className="px-2">
-                  <div className="relative aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg">
+                  <div
+                    className="relative aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg cursor-pointer"
+                    onClick={() => setLightboxIndex(i)}
+                  >
                     <img
                       src={slide.src}
                       alt={slide.label}
