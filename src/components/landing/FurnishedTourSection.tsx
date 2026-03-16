@@ -80,6 +80,7 @@ const slides: Slide[] = [
 const FurnishedTourSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -98,6 +99,47 @@ const FurnishedTourSection = () => {
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const lightboxNav = useCallback((dir: number) => {
+    setLightboxIndex((prev) => {
+      if (prev === null) return null;
+      return (prev + dir + slides.length) % slides.length;
+    });
+  }, []);
+
+  // Lightbox keyboard + body scroll lock
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") { e.preventDefault(); lightboxNav(-1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); lightboxNav(1); }
+      else if (e.key === "Escape") closeLightbox();
+    };
+    document.addEventListener("keydown", handleKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightboxIndex, lightboxNav, closeLightbox]);
+
+  // Lightbox touch/swipe
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    let startX = 0;
+    const onStart = (e: TouchEvent) => { startX = e.changedTouches[0].screenX; };
+    const onEnd = (e: TouchEvent) => {
+      const diff = startX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 50) lightboxNav(diff > 0 ? 1 : -1);
+    };
+    document.addEventListener("touchstart", onStart);
+    document.addEventListener("touchend", onEnd);
+    return () => {
+      document.removeEventListener("touchstart", onStart);
+      document.removeEventListener("touchend", onEnd);
+    };
+  }, [lightboxIndex, lightboxNav]);
 
   const currentSlide = slides[selectedIndex];
   const isAtico = currentSlide?.floor === "2º Pavimento — Ático";
