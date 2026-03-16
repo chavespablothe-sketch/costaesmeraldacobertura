@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 // Primeiro Pavimento
 import furnishedEntrada from "@/assets/property/furnished-entrada.jpg";
@@ -80,6 +80,7 @@ const slides: Slide[] = [
 const FurnishedTourSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -98,6 +99,47 @@ const FurnishedTourSection = () => {
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const lightboxNav = useCallback((dir: number) => {
+    setLightboxIndex((prev) => {
+      if (prev === null) return null;
+      return (prev + dir + slides.length) % slides.length;
+    });
+  }, []);
+
+  // Lightbox keyboard + body scroll lock
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") { e.preventDefault(); lightboxNav(-1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); lightboxNav(1); }
+      else if (e.key === "Escape") closeLightbox();
+    };
+    document.addEventListener("keydown", handleKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightboxIndex, lightboxNav, closeLightbox]);
+
+  // Lightbox touch/swipe
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    let startX = 0;
+    const onStart = (e: TouchEvent) => { startX = e.changedTouches[0].screenX; };
+    const onEnd = (e: TouchEvent) => {
+      const diff = startX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 50) lightboxNav(diff > 0 ? 1 : -1);
+    };
+    document.addEventListener("touchstart", onStart);
+    document.addEventListener("touchend", onEnd);
+    return () => {
+      document.removeEventListener("touchstart", onStart);
+      document.removeEventListener("touchend", onEnd);
+    };
+  }, [lightboxIndex, lightboxNav]);
 
   const currentSlide = slides[selectedIndex];
   const isAtico = currentSlide?.floor === "2º Pavimento — Ático";
@@ -147,7 +189,10 @@ const FurnishedTourSection = () => {
                 className="flex-[0_0_100%] min-w-0"
               >
                 <div className="px-2">
-                  <div className="relative aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg">
+                  <div
+                    className="relative aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg cursor-pointer"
+                    onClick={() => setLightboxIndex(i)}
+                  >
                     <img
                       src={slide.src}
                       alt={slide.label}
@@ -203,6 +248,54 @@ const FurnishedTourSection = () => {
       <p className="text-center text-primary-foreground/40 font-sans text-sm mt-4">
         {selectedIndex + 1} / {slides.length}
       </p>
+
+      {/* Fullscreen Lightbox */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+          onClick={closeLightbox}
+        >
+          <button
+            className="absolute top-4 right-4 md:top-6 md:right-6 text-white/60 hover:text-white z-10 p-2"
+            onClick={closeLightbox}
+            aria-label="Fechar"
+          >
+            <X className="w-7 h-7 md:w-8 md:h-8" />
+          </button>
+          <button
+            className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white z-10 p-2 md:p-3 rounded-full hover:bg-white/10 transition-colors"
+            onClick={(e) => { e.stopPropagation(); lightboxNav(-1); }}
+            aria-label="Foto anterior"
+          >
+            <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
+          </button>
+          <button
+            className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white z-10 p-2 md:p-3 rounded-full hover:bg-white/10 transition-colors"
+            onClick={(e) => { e.stopPropagation(); lightboxNav(1); }}
+            aria-label="Próxima foto"
+          >
+            <ChevronRight className="w-8 h-8 md:w-10 md:h-10" />
+          </button>
+          <div className="w-full h-full flex flex-col items-center justify-center px-12 md:px-20" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={slides[lightboxIndex].src}
+              alt={slides[lightboxIndex].label}
+              className="max-w-full max-h-[85vh] object-contain select-none"
+              draggable={false}
+            />
+            <div className="mt-4 text-center">
+              <p className="text-white/50 font-sans text-[10px] tracking-widest uppercase mb-1">
+                {slides[lightboxIndex].floor}
+              </p>
+              <p className="text-white/90 font-serif text-lg">{slides[lightboxIndex].label}</p>
+              <p className="text-white/50 font-sans text-sm mt-1">{slides[lightboxIndex].sub}</p>
+              <p className="text-white/30 font-sans text-xs mt-2">
+                {lightboxIndex + 1} / {slides.length} — Use ← → para navegar
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
