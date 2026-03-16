@@ -248,6 +248,54 @@ const FurnishedTourSection = () => {
       <p className="text-center text-primary-foreground/40 font-sans text-sm mt-4">
         {selectedIndex + 1} / {slides.length}
       </p>
+
+      {/* Fullscreen Lightbox */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+          onClick={closeLightbox}
+        >
+          <button
+            className="absolute top-4 right-4 md:top-6 md:right-6 text-white/60 hover:text-white z-10 p-2"
+            onClick={closeLightbox}
+            aria-label="Fechar"
+          >
+            <X className="w-7 h-7 md:w-8 md:h-8" />
+          </button>
+          <button
+            className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white z-10 p-2 md:p-3 rounded-full hover:bg-white/10 transition-colors"
+            onClick={(e) => { e.stopPropagation(); lightboxNav(-1); }}
+            aria-label="Foto anterior"
+          >
+            <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
+          </button>
+          <button
+            className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white z-10 p-2 md:p-3 rounded-full hover:bg-white/10 transition-colors"
+            onClick={(e) => { e.stopPropagation(); lightboxNav(1); }}
+            aria-label="Próxima foto"
+          >
+            <ChevronRight className="w-8 h-8 md:w-10 md:h-10" />
+          </button>
+          <div className="w-full h-full flex flex-col items-center justify-center px-12 md:px-20" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={slides[lightboxIndex].src}
+              alt={slides[lightboxIndex].label}
+              className="max-w-full max-h-[85vh] object-contain select-none"
+              draggable={false}
+            />
+            <div className="mt-4 text-center">
+              <p className="text-white/50 font-sans text-[10px] tracking-widest uppercase mb-1">
+                {slides[lightboxIndex].floor}
+              </p>
+              <p className="text-white/90 font-serif text-lg">{slides[lightboxIndex].label}</p>
+              <p className="text-white/50 font-sans text-sm mt-1">{slides[lightboxIndex].sub}</p>
+              <p className="text-white/30 font-sans text-xs mt-2">
+                {lightboxIndex + 1} / {slides.length} — Use ← → para navegar
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
