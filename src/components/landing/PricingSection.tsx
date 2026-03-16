@@ -65,6 +65,7 @@ const PricingSection = () => {
         </div>
       </div>
     </section>
+    // trigger vercel deploy
   );
 };
 
