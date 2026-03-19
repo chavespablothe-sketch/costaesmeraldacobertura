@@ -1,29 +1,25 @@
 import { useState, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-import suite1Img from "@/assets/property/suite1-new.jpg";
-import suitePrincipalImg from "@/assets/property/suite-principal-new.jpg";
-import suite3Img from "@/assets/property/suite3-new.jpg";
-
 const suites = [
   {
     title: "Suíte 01",
     desc: "Conforto e praticidade em um ambiente acolhedor.",
-    img: suite1Img,
+    img: "/lovable-uploads/suite-01-v2.jpg",
     alt: "Suíte 01 — quarto",
   },
   {
     title: "Suíte 02 — Principal",
     subtitle: "com Hidromassagem",
     desc: "Projetada para o descanso absoluto com banheiro equipado com hidromassagem exclusiva.",
-    img: suitePrincipalImg,
+    img: "/lovable-uploads/suite-principal-v2.jpg",
     alt: "Suíte 02 — banheiro com hidromassagem",
   },
   {
     title: "Suíte 03",
     subtitle: "com Hidromassagem",
     desc: "Reversível em estar social + lavabo do Ático. Espaço inteligente que se adapta ao seu estilo de vida.",
-    img: suite3Img,
+    img: "/lovable-uploads/suite-03-v2.jpg",
     alt: "Suíte 03 — reversível em estar social",
   },
 ];
