@@ -88,24 +88,15 @@ const MarinaSection = () => {
             </div>
             <div className="space-y-4 text-sm md:text-base font-sans text-primary-foreground/70 leading-relaxed">
               <p>
-                Empreendimentos de grande porte à beira-mar historicamente
-                impulsionam a valorização dos imóveis em seu entorno. Com a
-                chegada do Parque Urbano Marina — que vai gerar mais de
-                <strong className="text-primary-foreground"> 2 mil empregos permanentes</strong> e
-                atrair um fluxo contínuo de visitantes, moradores e turistas —
-                a tendência é de uma <strong className="text-primary-foreground">valorização significativa</strong> dos
-                imóveis na Agronômica e arredores.
+                Megaobras à beira-mar impulsionam a valorização de todo o
+                entorno. O Costa&nbsp;Esmeralda está posicionado para capturar
+                essa <strong className="text-primary-foreground">valorização expressiva</strong> —
+                antes mesmo da conclusão das obras.
               </p>
               <p>
-                Com um supermercado, dezenas de restaurantes, áreas de lazer
-                completas e a única marina urbana da capital catarinense, a
-                região se consolida como o novo epicentro de convivência e
-                sofisticação de Florianópolis.
-              </p>
-              <p>
-                O Costa Esmeralda, a poucos minutos de caminhada do futuro
-                parque, posiciona-se de forma privilegiada para capturar
-                toda essa valorização — <strong className="text-primary-foreground">antes mesmo da conclusão das obras</strong>.
+                Restaurantes, marina, parque e comércio premium a poucos passos
+                do edifício: quem compra agora garante um estilo de vida que
+                só vai se <strong className="text-primary-foreground">valorizar com o tempo</strong>.
               </p>
             </div>
           </div>
