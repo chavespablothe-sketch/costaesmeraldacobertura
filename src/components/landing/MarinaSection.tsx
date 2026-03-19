@@ -6,22 +6,22 @@ const highlights = [
   {
     icon: Ship,
     title: "Marina para 600+ Embarcações",
-    desc: "Marina pública com 50 vagas e marina privada com mais de 560 vagas — o maior complexo náutico do Sul do Brasil.",
+    desc: "O maior complexo náutico do Sul do Brasil, a poucos minutos de caminhada do Costa Esmeralda.",
   },
   {
     icon: Building2,
-    title: "Complexo Comercial Premium",
-    desc: "Mais de 110 espaços comerciais e 31 restaurantes em edifícios modernos à beira-mar.",
+    title: "110+ Espaços Comerciais",
+    desc: "Restaurantes, lojas e serviços premium — conveniência e sofisticação na vizinhança do edifício.",
   },
   {
     icon: TreePalm,
-    title: "Parque Urbano de 140 mil m²",
-    desc: "Praças, playgrounds, quadras esportivas, skate park, pet places e áreas de convivência com vista para a baía.",
+    title: "Parque de 140 mil m²",
+    desc: "Praças, quadras e áreas de convivência à beira da baía — o novo quintal dos moradores do Costa Esmeralda.",
   },
   {
     icon: Dumbbell,
-    title: "Lazer e Bem-Estar",
-    desc: "Academias ao ar livre, espelho d'água interativo, arquibancadas e gramados — um novo estilo de vida à porta de casa.",
+    title: "Lazer à Porta de Casa",
+    desc: "Academias ao ar livre, espelho d'água e gramados que ampliam o estilo de vida do edifício para além dos muros.",
   },
 ];
 
