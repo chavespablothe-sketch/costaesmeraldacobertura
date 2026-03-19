@@ -39,9 +39,8 @@ const MarinaSection = () => {
             <span className="italic">Beira-Mar Norte</span>
           </h2>
           <p className="text-base md:text-lg font-sans text-primary-foreground/60 mt-5 max-w-3xl mx-auto leading-relaxed">
-            Uma megaobra de R$&nbsp;350&nbsp;milhões está prestes a transformar a região
-            em um dos endereços mais desejados do Brasil — e o Costa&nbsp;Esmeralda
-            está a poucos passos desse futuro.
+            Uma megaobra de R$&nbsp;350&nbsp;milhões vai transformar a vizinhança do
+            Costa&nbsp;Esmeralda no endereço mais desejado de Florianópolis.
           </p>
         </div>
 
