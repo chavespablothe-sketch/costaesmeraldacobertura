@@ -10,6 +10,7 @@ import FurnishedTourSection from "@/components/landing/FurnishedTourSection";
 import GallerySection from "@/components/landing/GallerySection";
 import FloorplanSection from "@/components/landing/FloorplanSection";
 import MarketSection from "@/components/landing/MarketSection";
+import MarinaSection from "@/components/landing/MarinaSection";
 import PricingSection from "@/components/landing/PricingSection";
 import ContactSection from "@/components/landing/ContactSection";
 
@@ -37,6 +38,7 @@ const Index = () => {
       <GallerySection />
       <FloorplanSection />
       <MarketSection />
+      <MarinaSection />
       <PricingSection />
       <ContactSection />
     </main>
