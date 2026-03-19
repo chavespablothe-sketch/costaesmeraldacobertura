@@ -6,22 +6,22 @@ const highlights = [
   {
     icon: Ship,
     title: "Marina para 600+ Embarcações",
-    desc: "Marina pública com 50 vagas e marina privada com mais de 560 vagas — o maior complexo náutico do Sul do Brasil.",
+    desc: "O maior complexo náutico do Sul do Brasil, a poucos minutos de caminhada do Costa Esmeralda.",
   },
   {
     icon: Building2,
-    title: "Complexo Comercial Premium",
-    desc: "Mais de 110 espaços comerciais e 31 restaurantes em edifícios modernos à beira-mar.",
+    title: "110+ Espaços Comerciais",
+    desc: "Restaurantes, lojas e serviços premium — conveniência e sofisticação na vizinhança do edifício.",
   },
   {
     icon: TreePalm,
-    title: "Parque Urbano de 140 mil m²",
-    desc: "Praças, playgrounds, quadras esportivas, skate park, pet places e áreas de convivência com vista para a baía.",
+    title: "Parque de 140 mil m²",
+    desc: "Praças, quadras e áreas de convivência à beira da baía — o novo quintal dos moradores do Costa Esmeralda.",
   },
   {
     icon: Dumbbell,
-    title: "Lazer e Bem-Estar",
-    desc: "Academias ao ar livre, espelho d'água interativo, arquibancadas e gramados — um novo estilo de vida à porta de casa.",
+    title: "Lazer à Porta de Casa",
+    desc: "Academias ao ar livre, espelho d'água e gramados que ampliam o estilo de vida do edifício para além dos muros.",
   },
 ];
 
@@ -39,9 +39,8 @@ const MarinaSection = () => {
             <span className="italic">Beira-Mar Norte</span>
           </h2>
           <p className="text-base md:text-lg font-sans text-primary-foreground/60 mt-5 max-w-3xl mx-auto leading-relaxed">
-            Uma megaobra de R$&nbsp;350&nbsp;milhões está prestes a transformar a região
-            em um dos endereços mais desejados do Brasil — e o Costa&nbsp;Esmeralda
-            está a poucos passos desse futuro.
+            Uma megaobra de R$&nbsp;350&nbsp;milhões vai transformar a vizinhança do
+            Costa&nbsp;Esmeralda no endereço mais desejado de Florianópolis.
           </p>
         </div>
 
@@ -89,24 +88,15 @@ const MarinaSection = () => {
             </div>
             <div className="space-y-4 text-sm md:text-base font-sans text-primary-foreground/70 leading-relaxed">
               <p>
-                Empreendimentos de grande porte à beira-mar historicamente
-                impulsionam a valorização dos imóveis em seu entorno. Com a
-                chegada do Parque Urbano Marina — que vai gerar mais de
-                <strong className="text-primary-foreground"> 2 mil empregos permanentes</strong> e
-                atrair um fluxo contínuo de visitantes, moradores e turistas —
-                a tendência é de uma <strong className="text-primary-foreground">valorização significativa</strong> dos
-                imóveis na Agronômica e arredores.
+                Megaobras à beira-mar impulsionam a valorização de todo o
+                entorno. O Costa&nbsp;Esmeralda está posicionado para capturar
+                essa <strong className="text-primary-foreground">valorização expressiva</strong> —
+                antes mesmo da conclusão das obras.
               </p>
               <p>
-                Com um supermercado, dezenas de restaurantes, áreas de lazer
-                completas e a única marina urbana da capital catarinense, a
-                região se consolida como o novo epicentro de convivência e
-                sofisticação de Florianópolis.
-              </p>
-              <p>
-                O Costa Esmeralda, a poucos minutos de caminhada do futuro
-                parque, posiciona-se de forma privilegiada para capturar
-                toda essa valorização — <strong className="text-primary-foreground">antes mesmo da conclusão das obras</strong>.
+                Restaurantes, marina, parque e comércio premium a poucos passos
+                do edifício: quem compra agora garante um estilo de vida que
+                só vai se <strong className="text-primary-foreground">valorizar com o tempo</strong>.
               </p>
             </div>
           </div>
