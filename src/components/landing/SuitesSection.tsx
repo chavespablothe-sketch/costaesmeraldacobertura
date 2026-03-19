@@ -1,28 +1,29 @@
 import { useState, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import suite1 from "@/assets/property/suite1-new.jpg";
-import suitePrincipal from "@/assets/property/suite-principal-new.jpg";
-import suite3 from "@/assets/property/suite3-new.jpg";
+
+import suite1Img from "@/assets/property/suite1-new.jpg";
+import suitePrincipalImg from "@/assets/property/suite-principal-new.jpg";
+import suite3Img from "@/assets/property/suite3-new.jpg";
 
 const suites = [
   {
     title: "Suíte 01",
     desc: "Conforto e praticidade em um ambiente acolhedor.",
-    img: suite1,
-    alt: "Suíte 01 — quarto principal",
+    img: suite1Img,
+    alt: "Suíte 01 — quarto",
   },
   {
     title: "Suíte 02 — Principal",
     subtitle: "com Hidromassagem",
-    desc: "A suíte principal, projetada para o descanso absoluto com banheiro equipado com hidromassagem exclusiva.",
-    img: suitePrincipal,
+    desc: "Projetada para o descanso absoluto com banheiro equipado com hidromassagem exclusiva.",
+    img: suitePrincipalImg,
     alt: "Suíte 02 — banheiro com hidromassagem",
   },
   {
     title: "Suíte 03",
     subtitle: "com Hidromassagem",
-    desc: "Reversível em estar social + lavabo do Ático. Um espaço inteligente que se adapta ao seu estilo de vida.",
-    img: suite3,
+    desc: "Reversível em estar social + lavabo do Ático. Espaço inteligente que se adapta ao seu estilo de vida.",
+    img: suite3Img,
     alt: "Suíte 03 — reversível em estar social",
   },
 ];
@@ -55,37 +56,62 @@ const SuitesSection = () => {
 
   return (
     <>
-      <section className="py-24 md:py-36 px-6 md:px-16 lg:px-24 bg-background">
-        <div className="max-w-7xl mx-auto fade-section">
-          <div className="text-center mb-16">
-            <p className="text-sm font-sans tracking-widest uppercase text-muted-foreground mb-4">
-              O Santuário: Primeiro Pavimento
+      <section className="relative py-28 md:py-40 px-6 md:px-16 lg:px-24 bg-primary overflow-hidden">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, currentColor 40px, currentColor 41px)`,
+        }} />
+
+        <div className="relative max-w-7xl mx-auto fade-section">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <p className="text-[11px] font-sans tracking-[0.3em] uppercase text-primary-foreground/40 mb-5">
+              O Santuário · Primeiro Pavimento
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground">
-              As Três <span className="italic">Suítes</span>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-primary-foreground leading-tight">
+              As Três <span className="italic text-secondary">Suítes</span>
             </h2>
+            <div className="w-16 h-[1px] bg-secondary/40 mx-auto mt-8" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          {/* Cards Grid */}
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
             {suites.map((suite, i) => (
-              <div key={suite.title} className="group cursor-pointer" onClick={() => setLightboxIndex(i)}>
-                <div className="overflow-hidden mb-4">
+              <div
+                key={suite.title}
+                className="group cursor-pointer"
+                onClick={() => setLightboxIndex(i)}
+              >
+                {/* Image container */}
+                <div className="relative overflow-hidden mb-6 border border-primary-foreground/10">
                   <img
                     src={suite.img}
                     alt={suite.alt}
-                    className="w-full h-[300px] object-cover brightness-110 contrast-110 saturate-110 transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[340px] md:h-[380px] object-cover transition-all duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500 flex items-center justify-center">
+                    <span className="text-white/0 group-hover:text-white/80 text-xs font-sans tracking-[0.25em] uppercase transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                      Ver em detalhe
+                    </span>
+                  </div>
+                  {/* Number badge */}
+                  <div className="absolute top-4 left-4 w-10 h-10 rounded-full border border-primary-foreground/20 bg-primary/60 backdrop-blur-sm flex items-center justify-center">
+                    <span className="text-primary-foreground/60 font-serif text-sm">{String(i + 1).padStart(2, "0")}</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-serif text-foreground mb-1">
+
+                {/* Text */}
+                <h3 className="text-xl font-serif text-primary-foreground mb-1 group-hover:text-secondary transition-colors duration-300">
                   {suite.title}
                 </h3>
                 {suite.subtitle && (
-                  <p className="text-sm font-sans text-secondary font-medium mb-2">
+                  <p className="text-xs font-sans tracking-[0.2em] uppercase text-secondary/70 font-medium mb-3">
                     {suite.subtitle}
                   </p>
                 )}
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed">
+                <p className="text-sm font-sans text-primary-foreground/50 leading-relaxed">
                   {suite.desc}
                 </p>
               </div>
