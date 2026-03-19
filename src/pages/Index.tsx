@@ -38,6 +38,7 @@ const Index = () => {
       <GallerySection />
       <FloorplanSection />
       <MarketSection />
+      <MarinaSection />
       <PricingSection />
       <ContactSection />
     </main>
