@@ -21,7 +21,7 @@ const PricingSection = () => {
             Preço total do imóvel
           </p>
           <p className="text-4xl md:text-5xl lg:text-6xl font-serif text-foreground tracking-tight">
-            R$ 2.690.000<span className="text-2xl md:text-3xl text-muted-foreground">,00</span>
+            R$ 2.498.000<span className="text-2xl md:text-3xl text-muted-foreground">,00</span>
           </p>
 
           {/* Divider */}
