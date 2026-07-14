@@ -24,6 +24,17 @@ const PricingSection = () => {
             R$ 2.498.000<span className="text-2xl md:text-3xl text-muted-foreground">,00</span>
           </p>
 
+          {/* Documentation status */}
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-sm">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <p className="text-sm font-sans text-emerald-600 dark:text-emerald-400 tracking-wide">
+              Documentação OK — liberado para financiamento
+            </p>
+          </div>
+
           {/* Divider */}
           <div className="h-[1px] bg-border my-10 md:my-12 max-w-xs mx-auto" />
 
